@@ -14,8 +14,24 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.h1 {
+  @apply mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white;
+}
+
+.h2 {
+  @apply text-4xl font-bold dark:text-white mb-2;
+}
+
+.h3 {
+  @apply text-3xl dark:text-white py-4;
 }
