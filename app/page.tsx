@@ -68,8 +68,9 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* TODO */}
       <section>
-        <h2 className="h2">The Tech I Know</h2>
+        {/* <h2 className="h2">The Tech I Know</h2> */}
         {/* SystemVerilog, C, OCaml, Java, Python */}
         {/* This website is built using Next.js and hosted through Github Pages */}
         {/* -- Look for more in resume */}
