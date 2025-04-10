@@ -1,4 +1,4 @@
-import { getAllPosts, PostMeta } from '@/lib/posts';
+// import { getAllPosts, PostMeta } from '@/lib/posts';
 import ImageGallery from '@/components/ImageGallery';
 import ContactIcons from '@/components/ContactIcons'
 
@@ -10,7 +10,7 @@ export default async function HomePage() {
   // We can only run this on the server side in Next.js 13 with the 'app' folder
   // because reading fs is not allowed on the client side.
   // Therefore, we'll use a special "async" server component approach:
-  const posts: PostMeta[] = getAllPosts();
+  // const posts: PostMeta[] = getAllPosts();
 
   // List of images for the image gallery
   const images = [
