@@ -1,3 +1,6 @@
+(work in progress). My Rasp-Pi cluster stats can be seen at https://pi-cluster.joey-zhu.com/stats (if on).
+
+## Below are default Next.js ReadMe
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
