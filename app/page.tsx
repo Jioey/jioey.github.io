@@ -1,101 +1,86 @@
-import Image from "next/image";
+import { getAllPosts, PostMeta } from '@/lib/posts';
+import ImageGallery from '@/components/ImageGallery';
+import ContactIcons from '@/components/ContactIcons'
 
-export default function Home() {
+import Image from 'next/image';
+
+// Uses Tailwind CSS
+
+export default async function HomePage() {
+  // We can only run this on the server side in Next.js 13 with the 'app' folder
+  // because reading fs is not allowed on the client side.
+  // Therefore, we'll use a special "async" server component approach:
+  const posts: PostMeta[] = getAllPosts();
+
+  // List of images for the image gallery
+  const images = [
+    { src: "/landing/springs_hall.JPG", alt: "Springs Town Hall", caption: <>My high school, Indian Springs School in Birmingham, Alabama. Fun fact: our most famous alumnus is probably <a href="https://en.wikipedia.org/wiki/John_Green" style={{textDecoration: "underline"}}>John Green</a>!</> },
+    // TODO: add Seamester 
+    { src: "/landing/bu_nick.jpg", pref: "/landing/bu_nick.HEIC", alt: "Boston University, Nickerson Field", caption: <>Started at Boston University in Spring 2023 as a student in the College of General Studies (CGS), and later transferred into computer science.</> },
+    { src: "/landing/london_bu.jpg", pref: "/landing/london_bu.HEIC", alt: "Boston University London", caption: <>Studied abroad in Boston University London as part of the CGS program. This is one of the classroom buildings, and we had some classes in UCL's building too!</>},
+    // TODO: maybe graduation?
+  ]
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      {/* <div style={{ padding: '2rem' }}>
+                <h1>My Blog</h1>
+                <ul>
+                    {posts.map((post) => (
+                        <li key={post.slug} style={{ marginBottom: '1rem' }}>
+                            <Link href={`/posts/${post.slug}`}>
+                                {post.title}
+                            </Link>
+                            <br />
+                            <small>
+                                {post.date} by {post.author}
+                            </small>
+                        </li>
+                    ))}
+                </ul>
+            </div> */}
+      <section className="flex h-screen mx-8 pb-8">
+        <div className="flex-1 p-2 flex flex-col justify-center m-16">
+          <p className='text-4xl'>Hi there, welcome to my page!</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <section className="flex py-44 mx-28 h-[110vh]">
+        <div className="flex-1 mr-16 flex flex-col justify-center">
+          <p className='text-2xl'>&emsp; My name is Joey, born and raised in Shanghai, China. I begin school at SUIS Pudong and came to the US as an international student since 2017. I graduated from Boston University in 2025 with a Computer Science degree and I'm currently exploring my career possibilities.</p>
+          <br />
+          <p className='text-2xl'>&emsp; My main career interests at the moment are in technology and business. My recent classwork inspires me to persue work in the intersection between hardware and software, such as an embedded systems engineer or system architect. I also studied some business during my time in college and I'm looking to explore carrers such as a technology consultant or project manager.</p>
+        </div>
+
+        <div className="flex-1 relative">
+          <Image src="/me_sq.jpg" alt="Picture of me" className="rounded-lg" fill={true}
+            style={{
+              objectFit: 'cover',
+            }} />
+        </div>
+      </section>
+
+      <section className="mb-36">
+        <h2 className="h2 ml-4">My Journey in Pictures</h2>
+        <p className="ml-4 mb-2 text-xl">Here's some cool pictures of my academic journey.</p>
+        <div className="h-[600px]">
+          <ImageGallery images={images} />
+        </div>
+      </section>
+
+      <section>
+        <h2 className="h2">The Tech I Know</h2>
+        {/* SystemVerilog, C, OCaml, Java, Python */}
+        {/* This website is built using Next.js and hosted through Github Pages */}
+        {/* -- Look for more in resume */}
+      </section>
+
+      <section id='contact' className="flex flex-col items-center justify-center py-16 px-4">
+        <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
+        <p className="text-lg mb-2">Feel free to reach out about anything!</p>
+        <p className="mb-4">My email: yifanzhu233 at gmail.com</p>
+        <ContactIcons />
+      </section>
+    </>
   );
 }
