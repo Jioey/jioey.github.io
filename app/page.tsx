@@ -17,7 +17,7 @@ export default async function HomePage() {
     { src: "/landing/springs_hall.JPG", alt: "Springs Town Hall", caption: <>My high school, Indian Springs School in Birmingham, Alabama. Fun fact: our most famous alumnus is probably <a href="https://en.wikipedia.org/wiki/John_Green" style={{textDecoration: "underline"}}>John Green</a>!</> },
     // TODO: add Seamester 
     { src: "/landing/bu_nick.jpg", pref: "/landing/bu_nick.HEIC", alt: "Boston University, Nickerson Field", caption: <>Started at Boston University in Spring 2023 as a student in the College of General Studies (CGS), and later transferred into computer science.</> },
-    { src: "/landing/london_bu.jpg", pref: "/landing/london_bu.HEIC", alt: "Boston University London", caption: <>Studied abroad in Boston University London as part of the CGS program. This is one of the classroom buildings, and we had some classes in UCL's building too!</>},
+    { src: "/landing/london_bu.jpg", pref: "/landing/london_bu.HEIC", alt: "Boston University London", caption: <>Studied abroad in Boston University London as part of the CGS program. This is one of the classroom buildings, and we had some classes in UCL&apos;s building too!</>},
     // TODO: maybe graduation?
   ]
 
@@ -47,9 +47,9 @@ export default async function HomePage() {
 
       <section className="flex py-44 mx-28 h-[110vh]">
         <div className="flex-1 mr-16 flex flex-col justify-center">
-          <p className='text-2xl'>&emsp; My name is Joey, born and raised in Shanghai, China. I begin school at SUIS Pudong and came to the US as an international student since 2017. I graduated from Boston University in 2025 with a Computer Science degree and I'm currently exploring my career possibilities.</p>
+          <p className='text-2xl'>&emsp; My name is Joey, born and raised in Shanghai, China. I begin school at SUIS Pudong and came to the US as an international student since 2017. I graduated from Boston University in 2025 with a Computer Science degree and I&apos;m currently exploring my career possibilities.</p>
           <br />
-          <p className='text-2xl'>&emsp; My main career interests at the moment are in technology and business. My recent classwork inspires me to persue work in the intersection between hardware and software, such as an embedded systems engineer or system architect. I also studied some business during my time in college and I'm looking to explore carrers such as a technology consultant or project manager.</p>
+          <p className='text-2xl'>&emsp; My main career interests at the moment are in technology and business. My recent classwork inspires me to persue work in the intersection between hardware and software, such as an embedded systems engineer or system architect. I also studied some business during my time in college and I&apos;m looking to explore carrers such as a technology consultant or project manager.</p>
         </div>
 
         <div className="flex-1 relative">
@@ -62,7 +62,7 @@ export default async function HomePage() {
 
       <section className="mb-36">
         <h2 className="h2 ml-4">My Journey in Pictures</h2>
-        <p className="ml-4 mb-2 text-xl">Here's some cool pictures of my academic journey.</p>
+        <p className="ml-4 mb-2 text-xl">Here&apos;s some cool pictures of my academic journey.</p>
         <div className="h-[600px]">
           <ImageGallery images={images} />
         </div>

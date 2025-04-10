@@ -14,7 +14,7 @@ export default async function TravelPage() {
   return (
     <>
       <h1 className="h2">Travel Gallery</h1>
-      <h3 className='h3 italic'>(Not finished...but here's some pictures anyways)</h3>
+      <h3 className='h3 italic'>(Not finished...but here&apos;s some pictures anyways)</h3>
       <section>
         <h3 className="h3">Backpacking Europe (2023 Summer)</h3>
         <div className="h-[500px]">
