@@ -123,7 +123,7 @@ export default function HomePage() {
 
           <div className="space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
             <p>
-              I'm Joey, a recent grad from Boston University with a Bachelors in Computer Science. Originally from Shanghai and attended high-school through undergrad in the US.
+              {"I'm Joey, a recent grad from Boston University with a Bachelors in Computer Science. Originally from Shanghai and attended high-school through undergrad in the US."}
             </p>
 
             <p>
