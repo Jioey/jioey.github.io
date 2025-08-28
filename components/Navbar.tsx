@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export default function Navbar() {
-    const nav_text:string = "block lg:inline-block lg:mt-0 hover:text-teal-200 ml-10 mr-4";
+    const nav_text = "block lg:inline-block lg:mt-0 hover:text-teal-200 ml-10 mr-4";
 
     return (
         <>
