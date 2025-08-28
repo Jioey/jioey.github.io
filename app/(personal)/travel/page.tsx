@@ -1,4 +1,5 @@
 import ImageGallery from '@/components/ImageGallery';
+import Carousel from '@/components/Carousel'
 
 export default async function TravelPage() {
   const belize = [
@@ -13,12 +14,21 @@ export default async function TravelPage() {
 
   return (
     <>
-      <h1 className="h2">Travel Gallery</h1>
-      <h3 className='h3 italic'>(Not finished...but here&apos;s some pictures anyways)</h3>
+      <h1 className="h2 mt-16">Travel Gallery</h1>
       <section>
-        <h3 className="h3">Backpacking Europe (2023 Summer)</h3>
+        {/* (2023 Summer) */}
+        <h3 className="h3">Backpacking Europe</h3> 
         <div className="h-[500px]">
-          <ImageGallery images={eu} />
+          {/* <ImageGallery images={eu} /> */}
+          <Carousel
+            items={eu}
+            baseWidth={500}
+            autoplay={true}
+            autoplayDelay={4000}
+            pauseOnHover={true}
+            loop={true}
+            round={false}
+          />
         </div>
       </section>
 
