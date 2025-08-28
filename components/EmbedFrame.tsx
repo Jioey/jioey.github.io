@@ -12,7 +12,7 @@ export default function EmbedFrame({
   src,
   // title,
   width = "100%",
-  height = 500,
+  height = "100%",
   allowFullScreen = true,
 }: EmbedFrameProps) {
   return (
@@ -20,8 +20,10 @@ export default function EmbedFrame({
       src={src}
       // title={title}
       width={width}
-      height={height}
-      style={{ border: "none" }}
+      style={{ 
+        height: height,
+        border: "none"
+      }}
       allowFullScreen={allowFullScreen}
       loading="lazy"
     />
