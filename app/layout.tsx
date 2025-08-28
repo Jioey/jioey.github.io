@@ -9,7 +9,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: "Joey's Page",
-  description: "Hi, my name is Joey Zhu from Shanghai, China. Welcome to my page!",
+  description: "Hi, my name is Joey Zhu and this is my personal page, welcome!",
+  icons: "/profile_icon.png", // TODO: better icon?
 };
 
 export default function RootLayout({

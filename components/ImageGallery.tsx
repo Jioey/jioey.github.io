@@ -24,7 +24,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
   return (
     <div className="relative w-full h-full flex items-center justify-center">
       {/* Image Display */}
-      <div className="relative w-full h-full group overflow-hidden">
+      <div className="relative w-full h-full group overflow-hidden rounded-xl">
         <picture>
           {/* Preferred source */}
           {images[currentIndex].pref && (
@@ -36,6 +36,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
             src={images[currentIndex].src}
             alt={images[currentIndex].alt}
             fill={true}
+            loading="lazy"
             style={{
               objectFit: 'cover',
             }}
