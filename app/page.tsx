@@ -88,8 +88,8 @@ export default function HomePage() {
             <p className='text-4xl'>Hi there, welcome to my page!</p>
             <br />
             <p className="mt-6 text-lg text-gray-600 dark:text-gray-400 max-w-lg">
-              I develop efficient software across embedded systems, FPGAs, and the web.
-              Passionate about creating performance driven code and intuitive user interfaces.
+              My name is Joey Zhu and I graduated from Boston University in 2025 with a Bachelor's in Computer Science. I'm particularly interested in developing efficient software across bridging software and hardware. My project experiences ranges from embedded systems, FPGAs, and a bit of web development.
+              My Business Administration minor also inspires me to use my tech background in the field of consulting, where my experiences in information systems and business presentations.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
