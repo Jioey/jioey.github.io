@@ -1,14 +1,13 @@
 "use client";
-import Link from 'next/link';
 import { motion } from "framer-motion";
 
 export default function Navbar() {
   const nav_text: string = "block lg:inline-block lg:mt-0 hover:text-teal-200 ml-10 mr-4";
   const links = [
     { s: "Home", h: "/" },
-    { s: "Resume", h: "/resumes/Joey_Zhu_Resume_Bilingual.pdf" },
+    { s: "Resume", h: "/resumes/Joey_Zhu_Resume_Bilingual.pdf", t: "_blank" },
     // { s: "Dev Blog", h: "/dev_blog" },
-    { s: "Travel", h: "/travel" },
+    // { s: "Travel", h: "/travel" },
     { s: "Contact", h: "/#contact" }
   ]
 
@@ -33,6 +32,7 @@ export default function Navbar() {
               <motion.a
                 key={item.s}
                 href={item.h}
+                target={item.t || ''}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: i * 0.1 }}

@@ -14,8 +14,9 @@ const Footer = () => {
         {/* Navigation Links */}
         <nav className="flex flex-1 flex-wrap md:flex-nowrap gap-4 justify-center">
           <Link href="/">About Me</Link>
-          <Link href="/dev_blog">Developer Blog</Link>
-          <Link href="/travel">Travel Gallery</Link>
+          <Link href="/resumes/Joey_Zhu_Resume_Bilingual.pdf" target='_blank'>Resume</Link>
+          {/* <Link href="/dev_blog">Developer Blog</Link>
+          <Link href="/travel">Travel Gallery</Link> */}
           {/* <a href="">Raspberry-Pi Cluster</a> */}
           <Link href="/#contact">Contact</Link>
         </nav>
