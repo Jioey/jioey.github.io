@@ -20,7 +20,7 @@ export default function HomePage() {
     { src: "/landing/springs_hall.JPG", alt: "Springs Town Hall", caption: <>My high school, Indian Springs School in Birmingham, Alabama. Fun fact: <a href="https://en.wikipedia.org/wiki/John_Green" style={{ textDecoration: "underline" }}>John Green</a> went there too!</> },
     // TODO: add Seamester 
     { src: "/landing/bu_nick.jpg", pref: "/landing/bu_nick.HEIC", alt: "Boston University, Nickerson Field", caption: <>Started at Boston University in Spring 2023 as a student in the College of General Studies (CGS), and later transferred into computer science.</> },
-    { src: "/landing/london_bu.jpg", pref: "/landing/london_bu.HEIC", alt: "Boston University London", caption: <>Studied abroad in Boston University London as part of the CGS program. This is one of the classroom buildings, and we had some classes in UCL&apos;s building too!</> },
+    { src: "/landing/london_bu.jpg", pref: "/landing/london_bu.HEIC", alt: "Boston University London", caption: <>       {"Studied abroad in Boston University London as part of the CGS program. This is one of the classroom buildings, and we had some classes in UCL's building too!"}</> },
     // TODO: maybe graduation?
   ]
 
@@ -88,8 +88,8 @@ export default function HomePage() {
             <p className='text-4xl'>Hi there, welcome to my page!</p>
             <br />
             <p className="mt-6 text-lg text-gray-600 dark:text-gray-400 max-w-lg">
-              My name is Joey Zhu and I graduated from Boston University in 2025 with a Bachelor's in Computer Science. I'm particularly interested in developing efficient software across bridging software and hardware. My project experiences ranges from embedded systems, FPGAs, and a bit of web development.
-              My Business Administration minor also inspires me to use my tech background in the field of consulting, where my experiences in information systems and business presentations.
+              {"My name is Joey Zhu and I graduated from Boston University in 2025 with a Bachelor\'s in Computer     Science. I\'m particularly interested in developing efficient software across bridging software and hardware. My project experiences ranges from embedded systems, FPGAs, and a bit of web development. \
+              My Business Administration minor also inspires me to use my tech background in the field of consulting, where my experiences in information systems and business presentations."}              
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
